@@ -8,4 +8,4 @@ os
 ctypes  
 
 ## Usage
-Times set for 5 points during the day (dawn, sunrise, noon, sunset, dusk, night) with 3 points inbetween. Times are based on location, and can be set in the `loc`. Put image filepath in `wallpapers`.
+Times set for 5 points during the day (dawn, sunrise, noon, sunset, dusk, night) with 3 points inbetween. Times are based on location, and can be set in `loc`. Put image filepath in `wallpapers`.
