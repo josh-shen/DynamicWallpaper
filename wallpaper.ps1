@@ -21,10 +21,8 @@ public class Params
 
 $t_minute = (Get-Date).Hour * 60 + (Get-Date).Minute
 
-# set new times if it is a new day
-if ($t_minute -eq 0) {
-    python setup.py
-}
+# run Python script to setup time markers
+python setup.py
 
 $times = Get-Content -Path "$PSScriptRoot\times.txt"
 
