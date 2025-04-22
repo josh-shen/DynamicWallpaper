@@ -1,6 +1,14 @@
 # Windows Dynamic Wallpaper
-Script to change windows desktop wallpaper depending on time of day
+PowerShell script to change windows desktop wallpaper depending on time of day
 
-Include the path to the wallpaper directory and wallpaper image paths in config.ps1
+## Setup
+Install the packages in `requirements.txt`
 
-Add this script to Task Scheduler to run as often as needed
+Include the path to the wallpaper directory and wallpaper image paths in `config.ps1`
+
+Add the full path of the PowerShell script to `script.vbs`
+
+## Task Scheduler
+Create a new task in Task Scheduler and use these Actions configurations
+- Program/script: `wscript.exe`
+- Add arguments (optional): `[full path of script.vbs]`
