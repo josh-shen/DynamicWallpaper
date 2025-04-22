@@ -57,10 +57,10 @@ $wallpaper_path = switch ($t_minute) {
 $bytes = (New-Object -ComObject WScript.Shell).RegRead("HKEY_CURRENT_USER\Control Panel\Desktop\TranscodedImageCache"); 
 $current_wallpaper = ([System.Text.Encoding]::Unicode.GetString($bytes[24..($bytes.length-1)]) -split "\0")[0]
 
-#if ($current_wallpaper -ne $wallpaper_path) {
+if ($current_wallpaper -ne $wallpaper_path) {
     Set-Wallpaper -Image $wallpaper_path
 
     $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
     $logMessage = "$timestamp - Changed wallpaper to: $wallpaper_path"
     $logMessage | Out-File -FilePath "$PSScriptRoot\log.txt" -Append
-#}
+}
