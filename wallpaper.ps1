@@ -26,7 +26,7 @@ if ($t_minute -eq 0) {
     python setup.py
 }
 
-$times = Get-Content -Path "times.txt"
+$times = Get-Content -Path "$PSScriptRoot\times.txt"
 
 $wallpaper_path = switch ($t_minute) {
     {$_ -ge $times[0] -and $_ -lt $times[1]} {
