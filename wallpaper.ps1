@@ -63,6 +63,6 @@ $current_wallpaper = ([System.Text.Encoding]::Unicode.GetString($bytes[24..($byt
     Set-Wallpaper -Image $wallpaper_path
 
     $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
-    $logMessage = "$timestamp - Changed wallpaper to: $wallpaper_path - $current_wallpaper - $t_minute"
+    $logMessage = "$timestamp - Changed wallpaper to: $wallpaper_path"
     $logMessage | Out-File -FilePath "$PSScriptRoot\log.txt" -Append
 #}
