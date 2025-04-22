@@ -1,0 +1,10 @@
+$script:wallpaper_directory = ""
+
+$script:image1 = ""
+$script:image2 = ""
+$script:image3 = ""
+$script:image4 = ""
+$script:image5 = ""
+$script:image6 = ""
+$script:image7 = ""
+$script:image8 = ""
