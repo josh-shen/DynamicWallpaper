@@ -10,8 +10,8 @@ Add the full path of the powershell script to script.vbs
 Create a new task in Task Scheduler and use these configurations
 
 ### Triggers
-Begin the task: At log on
-Repeat task every: 1 minute, for a duration of: Indefinetly
+- Begin the task: At log on
+- Repeat task every: 1 minute, for a duration of: Indefinetly
 
 ### Actions
 - Program/script: `wscript.exe`
