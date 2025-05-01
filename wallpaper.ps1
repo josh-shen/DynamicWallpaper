@@ -75,15 +75,17 @@ if (-not (Test-Path -Path $wallpaper_path -PathType Leaf)) {
     exit 1
 }
 
-$result = Set-Wallpaper -Image $wallpaper_path
-
 # get current wallpaper image path
 $bytes = (New-Object -ComObject WScript.Shell).RegRead("HKEY_CURRENT_USER\Control Panel\Desktop\TranscodedImageCache"); 
 $current_wallpaper = ([System.Text.Encoding]::Unicode.GetString($bytes[24..($bytes.length-1)]) -split "\0")[0]
 
+
+$result = Set-Wallpaper -Image $wallpaper_path
+
 # log results
 if ($result -eq 0) {
     Write-Log "ERROR: Wallpaper change failed"
-} else if ($result -eq 1 -and $current_wallpaper -ne $wallpaper_path) {
+} 
+if ($result -eq 1 -and $current_wallpaper -ne $wallpaper_path) {
     Write-Log "${result}: Wallpaper changed from $current_wallpaper to $wallpaper_path"
 }
