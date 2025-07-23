@@ -1,0 +1,10 @@
+$script:wallpaper_directory = "path to DynamicWallpaper\images"
+
+$script:image1 = "Appearance_Dynamic_1.bmp"
+$script:image2 = "Appearance_Dynamic_2.bmp"
+$script:image3 = "Appearance_Dynamic_3.bmp"
+$script:image4 = "Appearance_Dynamic_4.bmp"
+$script:image5 = "Appearance_Dynamic_5.bmp"
+$script:image6 = "Appearance_Dynamic_6.bmp"
+$script:image7 = "Appearance_Dynamic_7.bmp"
+$script:image8 = "Appearance_Dynamic_8.bmp"
