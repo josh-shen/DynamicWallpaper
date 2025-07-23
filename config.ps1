@@ -1,4 +1,4 @@
-$script:wallpaper_directory = ""
+$script:wallpaper_directory = "path to wallpaper images"
 
 $script:image1 = ""
 $script:image2 = ""

@@ -34,7 +34,7 @@ public class Params
 $t_minute = (Get-Date).Hour * 60 + (Get-Date).Minute
 
 try {
-    # run Python script to setup time markers
+    # Run Python script to setup time markers
     python setup.py
     $times = Get-Content -Path "$PSScriptRoot\times.txt"
 } catch {
@@ -75,7 +75,7 @@ if (-not (Test-Path -Path $wallpaper_path -PathType Leaf)) {
     exit 1
 }
 
-# get current wallpaper image path
+# Get current wallpaper image path
 $bytes = (New-Object -ComObject WScript.Shell).RegRead("HKEY_CURRENT_USER\Control Panel\Desktop\TranscodedImageCache"); 
 $current_wallpaper = ([System.Text.Encoding]::Unicode.GetString($bytes[24..($bytes.length-1)]) -split "\0")[0]
 
@@ -86,6 +86,3 @@ $result = Set-Wallpaper -Image $wallpaper_path
 if ($result -eq 0) {
     Write-Log "ERROR: Wallpaper change failed"
 } 
-if ($result -eq 1 -and $current_wallpaper -ne $wallpaper_path) {
-    Write-Log "${result}: Wallpaper changed from $current_wallpaper to $wallpaper_path"
-}
